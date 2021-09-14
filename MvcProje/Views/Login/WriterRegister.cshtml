@@ -12,7 +12,7 @@ Author URL: http://w3layouts.com
 <html lang="zxx">
 
 <head>
-    <title>Genç Yazılımcılar Admin Giriş Paneli</title>
+    <title>Genç Yazılımcılar Yazar Kayıt Olma Paneli</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
@@ -38,13 +38,14 @@ Author URL: http://w3layouts.com
             <div class="workinghny-form-grid">
                 <div class="main-hotair">
                     <div class="content-wthree">
-                        <h2>Genç Yazılımcılar Admin Giriş Paneli</h2>
-                        @using (Html.BeginForm("AdminLogin", "Login", FormMethod.Post))
+                        <h2>Genç Yazılımcılar Yazar Kayıt Olma Paneli</h2>
+                        @using (Html.BeginForm("WriterRegister", "Login", FormMethod.Post))
                         {
-                            <input type="text" class="text" name="AdminUserName" placeholder="Kullanıcı Adı" required="" autofocus>
-                            <input type="password" class="password" name="AdminPassword" placeholder="Şifre" required="" autofocus>
-                            <button class="btn" type="submit">Giriş Yap</button>
+                            <input type="text" class="text" name="WriterMail" placeholder="Kullanıcı Adı" required="" autofocus>
+                            <input type="password" class="password" name="WriterPassword" placeholder="Şifre" required="" autofocus>
+                            <button class="btn" type="submit">Kayıt Ol</button>
                         }
+                       
                     </div>
                     <div class="w3l_form align-self">
                         <div class="left_grid_info">

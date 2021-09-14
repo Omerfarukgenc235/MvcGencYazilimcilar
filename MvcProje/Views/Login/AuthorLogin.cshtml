@@ -41,11 +41,11 @@ Author URL: http://w3layouts.com
                         <h2>Genç Yazılımcılar Yazar Giriş Paneli</h2>
                         @using (Html.BeginForm("AuthorLogin", "Login", FormMethod.Post))
                         {
-                            <input type="text" class="text" name="Mail" placeholder="Kullanıcı Adı" required="" autofocus>
-                            <input type="password" class="password" name="Password" placeholder="Şifre" required="" autofocus>
+                            <input type="text" class="text" name="WriterMail" placeholder="Kullanıcı Adı" required="" autofocus>
+                            <input type="password" class="password" name="WriterPassword" placeholder="Şifre" required="" autofocus>
                             <button class="btn" type="submit">Giriş Yap</button>
                         }
-                        <p class="account">Hesabınız mı yok ? <a href="#signup">Kayıt Ol</a></p>
+                        <p class="account">Hesabınız mı yok ? <a href="/Login/WriterRegister/">Kayıt Ol</a></p>
                     </div>
                     <div class="w3l_form align-self">
                         <div class="left_grid_info">

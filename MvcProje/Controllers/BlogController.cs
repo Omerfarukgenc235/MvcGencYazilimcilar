@@ -141,7 +141,6 @@ namespace MvcProje.Controllers
             var bloglar = bm.GetList();
             return View(bloglar);
         }
-        [Authorize(Roles ="A")]
         [HttpGet]
         public ActionResult YeniBlog()
         {

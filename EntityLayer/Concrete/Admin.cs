@@ -11,12 +11,10 @@ namespace EntityLayer.Concrete
     {
         [Key]
         public int AdminID { get; set; }
-        [StringLength(20)]
-        public string UserName { get; set; }
-        [StringLength(1)]
-        public string AdminRole { get; set; }
-        [StringLength(20)]
-        public string Password { get; set; }
-
+        public byte[] AdminUserName { get; set; }
+        public byte[] AdminPasswordHash { get; set; }
+        public byte[] AdminPasswordSalt { get; set; }
+        public int AdminYetkiID { get; set; }
+        public virtual Yetki Yetkis { get; set; }
     }
 }

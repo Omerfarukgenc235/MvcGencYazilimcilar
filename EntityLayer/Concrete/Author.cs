@@ -26,8 +26,9 @@ namespace EntityLayer.Concrete
         public string AboutShort { get; set; }
         [StringLength(50)]
         public string Mail { get; set; }
-        [StringLength(50)]
-        public string Password { get; set; }
+        public byte[] WriterPasswordHash { get; set; }
+        public byte[] WriterPasswordSalt { get; set; }
+   
         [StringLength(20)]
         public string PhoneNumber { get; set; }
         public ICollection<Blog> Blogs { get; set; }

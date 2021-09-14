@@ -8,8 +8,7 @@
 
 
 <form class="form-group" method="post">
-    @Html.Label("Blog Başlığı")
-    @Html.TextBoxFor(x => x.BlogID, new { @class = "form-control" })
+    @Html.HiddenFor(x => x.BlogID, new { @class = "form-control" })
     <br />
     @Html.Label("Blog Başlığı")
     @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
@@ -29,5 +28,5 @@
     @Html.Label("Blog İçeriği")
     @Html.TextAreaFor(x => x.BlogContent, 10, 40, new { @class = "form-control" })
     <br />
-    <button class="btn btn-success">Gğncelle</button>
+    <button class="btn btn-success">Güncelle</button>
 </form>

@@ -29,7 +29,6 @@ namespace BusinessLayer.Concrete
             author.AuthorAbout = p.AuthorAbout;
             author.AuthorTitle = p.AuthorTitle;
             author.Mail = p.Mail;
-            author.Password = p.Password;
             author.PhoneNumber = p.PhoneNumber;
             return repouser.Update(author);
         }

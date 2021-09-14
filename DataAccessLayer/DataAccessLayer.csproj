@@ -64,6 +64,7 @@
     <Compile Include="Concrete\Repository.cs" />
     <Compile Include="EntityFramework\EfAboneDal.cs" />
     <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfAdminDal.cs" />
     <Compile Include="EntityFramework\EfAuthorDal.cs" />
     <Compile Include="EntityFramework\EfBlogDal.cs" />
     <Compile Include="EntityFramework\EfCategoryDal.cs" />
@@ -117,6 +118,18 @@
     <Compile Include="Migrations\202108151716404_mig_mailstatusdelete.designer.cs">
       <DependentUpon>202108151716404_mig_mailstatusdelete.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109141027549_mig_Addhashing.cs" />
+    <Compile Include="Migrations\202109141027549_mig_Addhashing.designer.cs">
+      <DependentUpon>202109141027549_mig_Addhashing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109141254182_mig_roleclassadd.cs" />
+    <Compile Include="Migrations\202109141254182_mig_roleclassadd.designer.cs">
+      <DependentUpon>202109141254182_mig_roleclassadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109141401409_mig_deleteauthorpassword.cs" />
+    <Compile Include="Migrations\202109141401409_mig_deleteauthorpassword.designer.cs">
+      <DependentUpon>202109141401409_mig_deleteauthorpassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -160,6 +173,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202108151716404_mig_mailstatusdelete.resx">
       <DependentUpon>202108151716404_mig_mailstatusdelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109141027549_mig_Addhashing.resx">
+      <DependentUpon>202109141027549_mig_Addhashing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109141254182_mig_roleclassadd.resx">
+      <DependentUpon>202109141254182_mig_roleclassadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109141401409_mig_deleteauthorpassword.resx">
+      <DependentUpon>202109141401409_mig_deleteauthorpassword.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

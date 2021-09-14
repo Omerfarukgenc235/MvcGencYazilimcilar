@@ -25,7 +25,7 @@ namespace MvcProje.Controllers
         }
         public PartialViewResult Partial1(string p)
         {
-            p = (string)Session["Mail"];
+            p = (string)Session["WriterMail"];
             var profilevalues = userprofile.GetAuthorByMail(p);
             return PartialView(profilevalues);
         }
@@ -37,7 +37,7 @@ namespace MvcProje.Controllers
         }
         public ActionResult BlogList(string p)
         {
-            p = (string)Session["Mail"];
+            p = (string)Session["WriterMail"];
             Context c = new Context();
             int id = c.Authors.Where(x => x.Mail == p).Select(y => y.AuthorID).FirstOrDefault();
             var blog = userprofile.GetBlogByAuthor(id);
@@ -82,18 +82,15 @@ namespace MvcProje.Controllers
                                                Value = x.CategoryID.ToString()
                                            }).ToList();
             ViewBag.values = values;
-            List<SelectListItem> yazar = (from x in c.Authors.ToList()
-                                          select new SelectListItem
-                                          {
-                                              Text = x.AuthorName,
-                                              Value = x.AuthorID.ToString()
-                                          }).ToList();
-            ViewBag.yazar = yazar;
             return View();
         }
         [HttpPost]
         public ActionResult YeniBlog(Blog b)
         {
+            Context c = new Context();
+            string p = (string)Session["WriterMail"];
+            int yazar = c.Authors.Where(x => x.Mail == p).Select(y => y.AuthorID).FirstOrDefault();
+            b.AuthorID = yazar;
             bm.BlogAdd(b);
             return RedirectToAction("BlogList");
         }
