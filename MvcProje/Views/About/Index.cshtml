@@ -1,0 +1,52 @@
+﻿@model IEnumerable<EntityLayer.Concrete.About>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div class="site-cover site-cover-sm same-height overlay single-page" style="background-image: url('https://i.hizliresim.com/kiameqp.jpg'); background-position: center;">
+    <div class="container">
+        <div class="row same-height justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="post-entry text-center">
+                    <h1 class="">Hakkımızda</h1>
+                    <p class="lead mb-4 text-white">Herkese merhabalar Genç Yazılımcılar ekibini tanımak ister misiniz ?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="site-section bg-light">
+    <div class="container">
+        <div class="row">
+            @foreach (var x in Model)
+            {
+                <div class="col-md-6 order-md-2">
+
+                    <img src="@x.AboutImage1" alt="Image" style="height:350px;width:600px;" class="img-fluid">
+                </div>
+                <div class="col-md-5 mr-auto order-md-1">
+                    <h2>Biz Kimiz</h2>
+
+
+                    <p>@x.AboutContent1</p>
+
+                    <ul class="ul-check list-unstyled success">
+                        <li>Araştırmacı</li>
+                        <li>Meraklı</li>
+                        <li>Maceracı</li>
+                        <li>Paylaşmayı seven</li>
+                    </ul>
+                    <p>@x.AboutContent2</p>
+
+                </div>
+            }
+        </div>
+            
+        </div>
+</div>
+@Html.Action("MeetTheTeem", "About")
+
+@Html.Action("AddMail", "Abone")
+@Html.Action("Footer", "About")

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<EntityLayer.Concrete.SubscribeMail>
+@{
+    ViewBag.Title = "Aboneler";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<h2>Abone Listesi</h2>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Mail Adresi</th>
+        <th>Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.MailID</td>
+            <td>@x.Mail</td>
+            <td><a href="/Abone/AboneSil/@x.MailID" class="btn btn-danger">Sil</a></td>
+            </tr>
+    }
+</table>
